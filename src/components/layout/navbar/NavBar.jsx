@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.css";
+import "./navBar.css";
 import SearchIcon from '@mui/icons-material/Search';
 
 const NavBar = (props) => {
