@@ -11,12 +11,12 @@ const ChangePages = (props) => {
             <ArrowBackIcon/>
         </div>
 
-        <Button onClick={()=>setNumPage(numPage=>numPage-1)}>
+        <Button onClick={()=>setNumPage(numPage=>numPage-1)}variant="outlined">
             Anterior
         </Button>
 
         
-        <Button onClick={()=>setNumPage(numPage=>numPage+1)}>
+        <Button onClick={()=>setNumPage(numPage=>numPage+1)} variant="outlined">
             Sigiente
         </Button>
 

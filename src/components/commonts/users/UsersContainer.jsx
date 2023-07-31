@@ -7,6 +7,7 @@ import { ContextGeneral } from "../../../context/contextPages";
 const UsersContainer = () => {
   const [users, setUsers] = useState([]);
   const [numPage, setNumPage] = useState(1);
+  const[isActive, setIsActive]=useState(false)
   const {state, dispatch}=useContext(ContextGeneral)
 
   const numRegisterActive = Number(state.numPages.numPages)
@@ -22,6 +23,13 @@ const UsersContainer = () => {
     setNumPage(numPage + 1);
   };
 
+  const activeModal = () => 
+  {
+    setIsActive(!isActive)
+  }
+
+  console.log(isActive)
+
   return (
     <div
       style={{
@@ -34,7 +42,7 @@ const UsersContainer = () => {
         backgroundColor: "#f5f2f2",
       }}
     >
-      <Users users={users} numRegisterActive={numRegisterActive}  />
+      <Users users={users} numRegisterActive={numRegisterActive} isActive={isActive} activeModal={activeModal} />
       <ChangePages setNumPage={setNumPage}  />
     </div>
   );
