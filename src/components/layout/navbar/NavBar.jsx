@@ -16,8 +16,9 @@ const NavBar = (props) => {
           <input
             type="text"
             placeholder="Ingresa un numero"
-            name="textSearch"
+            name="numPages"
             onChange={handleChange}
+            
           />
           <SearchIcon className="icon-search"/>
         </div>
